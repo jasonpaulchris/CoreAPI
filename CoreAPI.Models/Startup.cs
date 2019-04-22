@@ -1,26 +1,21 @@
-﻿using AutoMapper;
-using CoreAPI.Business.Interfaces;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 
-namespace CoreAPI
+namespace CoreAPI.Models
 {
     public class Startup
     {
-        private readonly MapperConfiguration _mapperConfiguration;
-
-        public Startup(IHostingEnvironment env)
+        public Startup(IConfiguration configuration)
         {
-            var builder = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
-                .AddEnvironmentVariables();
-
-            _mapperConfiguration = new MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile(new AutoMapperProfileConfiguration());
-            });
+            Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -28,11 +23,7 @@ namespace CoreAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IStoreManager, StoreManager>();
-            services.AddTransient<IDataStore, DataStore>();
-            services.AddSingleton(sp => _mapperConfiguration.CreateMapper());
             services.AddMvc();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

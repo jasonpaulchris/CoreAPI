@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreAPI", "CoreAPI\CoreAPI.csproj", "{82597AE7-43DD-430E-80A3-7BC0AE357390}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreAPI.Models", "CoreAPI.Models\CoreAPI.Models.csproj", "{190C7999-030B-4758-A319-D4E5CFB51E0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreAPI.Business", "CoreAPI.Business\CoreAPI.Business.csproj", "{C0DB5B06-1008-42D0-9C61-8517620D1444}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{82597AE7-43DD-430E-80A3-7BC0AE357390}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82597AE7-43DD-430E-80A3-7BC0AE357390}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82597AE7-43DD-430E-80A3-7BC0AE357390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{190C7999-030B-4758-A319-D4E5CFB51E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{190C7999-030B-4758-A319-D4E5CFB51E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{190C7999-030B-4758-A319-D4E5CFB51E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{190C7999-030B-4758-A319-D4E5CFB51E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0DB5B06-1008-42D0-9C61-8517620D1444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0DB5B06-1008-42D0-9C61-8517620D1444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0DB5B06-1008-42D0-9C61-8517620D1444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0DB5B06-1008-42D0-9C61-8517620D1444}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
